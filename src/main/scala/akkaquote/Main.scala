@@ -22,7 +22,7 @@ object Main extends App {
   Await.result(future1, timeout.duration)
   Await.result(future2, timeout.duration)
   Await.result(future3, timeout.duration)
-  //println(s"future1 :: $future1")
+  println(s"future1 :: $future1")
 
   val quotePrinterActorRef = system.actorOf(Props(new QuotePrinterActor(quoteActorRef)), "quotesPrinterActor")
   val future4 = quotePrinterActorRef ? PrintRandomQuote
