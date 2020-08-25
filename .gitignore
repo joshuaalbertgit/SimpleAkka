@@ -1,0 +1,4 @@
+# ignore these three folders 
+/.idea/
+/project/
+/target
