@@ -19,3 +19,17 @@ class Home (val price: Double, val location: String)
 case class AddHome(home : Home)
 case object HomeAdded
 
+//create a topic
+class CreateTopic
+case class createTopic(name: String)
+case object TopicCreated
+
+//send a message to a TOPIC
+class CreateProducer
+case class createRecord(topicName: String)
+case class sendMsgToProducer(recordName: String)
+
+//consume the message from a TOPIC
+class CreateConsumer
+case class subscribe(topicName: String)
+case class getMessages(recordName: List[String])
